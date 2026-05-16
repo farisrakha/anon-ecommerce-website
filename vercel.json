@@ -1,0 +1,5 @@
+{
+  "buildCommand": "pnpm build && node scripts/build-vercel.mjs",
+  "framework": null,
+  "installCommand": "pnpm install"
+}
