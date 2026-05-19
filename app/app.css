@@ -440,8 +440,8 @@ ion-icon { display: block; }
 }
 
 .nocte-cta-overlay {
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(245, 245, 243, 0.85);
   transition: background-color var(--nocte-transition);
 }
 .nocte-cta-overlay:hover,
-.nocte-cta-overlay:focus-visible { background-color: rgba(0, 0, 0, 0.55); }
+.nocte-cta-overlay:focus-visible { background-color: rgba(245, 245, 243, 0.92); }

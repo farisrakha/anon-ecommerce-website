@@ -5,7 +5,7 @@ export default function ServicesSection() {
     <div className="flex-1">
       <h2
         className="text-fs-4 mb-6"
-        style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}
+        style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}
       >
         Our Services
       </h2>
@@ -22,7 +22,7 @@ export default function ServicesSection() {
               <ion-icon name={service.icon} style={{ color: 'var(--nocte-gray-light)' }} class="text-xl" />
             </div>
             <div>
-              <h3 className="text-fs-8 mb-1" style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-sans)' }}>{service.title}</h3>
+              <h3 className="text-fs-8 mb-1" style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-sans)' }}>{service.title}</h3>
               <p className="text-fs-9" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>{service.description}</p>
             </div>
           </a>

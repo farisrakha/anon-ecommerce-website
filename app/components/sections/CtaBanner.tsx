@@ -13,7 +13,7 @@ export default function CtaBanner() {
         <p className="nocte-label mb-2">25% Discount</p>
         <h2
           className="mb-2"
-          style={{ fontFamily: 'var(--nocte-serif)', color: 'var(--nocte-white)', fontSize: '1.75rem', fontWeight: 400 }}
+          style={{ fontFamily: 'var(--nocte-serif)', color: 'var(--nocte-black)', fontSize: '1.75rem', fontWeight: 400 }}
         >
           Summer collection
         </h2>

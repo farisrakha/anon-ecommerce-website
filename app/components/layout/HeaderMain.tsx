@@ -4,7 +4,7 @@ export default function HeaderMain() {
       <div className="max-w-[1350px] mx-auto px-4 flex items-center gap-6">
 
         <a href="#" className="shrink-0">
-          <img src="/images/logo/logo.svg" alt="Anon's logo" width={120} height={36} />
+          <img src="/images/logo/logo.svg" alt="NOCTE logo" width={120} height={36} />
         </a>
 
         <div

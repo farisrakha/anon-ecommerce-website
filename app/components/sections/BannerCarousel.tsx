@@ -47,7 +47,7 @@ export default function BannerCarousel() {
                   className="mb-4 max-w-[280px] leading-tight"
                   style={{
                     fontFamily: 'var(--nocte-serif)',
-                    color: 'var(--nocte-white)',
+                    color: 'var(--nocte-black)',
                     fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
                     fontWeight: 400,
                     whiteSpace: 'pre-line',

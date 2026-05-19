@@ -34,7 +34,7 @@ export default function DealOfTheDay() {
     <div className="mb-6">
       <h2
         className="text-fs-4 mb-4 pb-2"
-        style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-serif)', fontWeight: 400, borderBottom: '1px solid var(--nocte-border)' }}
+        style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-serif)', fontWeight: 400, borderBottom: '1px solid var(--nocte-border)' }}
       >
         Deal of the day
       </h2>
@@ -75,7 +75,7 @@ export default function DealOfTheDay() {
                 </p>
 
                 <div className="flex items-center gap-3 mb-4">
-                  <p className="text-fs-4" style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-sans)', fontWeight: 500 }}>
+                  <p className="text-fs-4" style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-sans)', fontWeight: 500 }}>
                     ${product.price.toFixed(2)}
                   </p>
                   <del className="text-fs-7" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>

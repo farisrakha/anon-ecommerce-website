@@ -24,7 +24,7 @@ function ShowcaseItem({ product }: { product: Product }) {
           {product.category}
         </a>
         <div className="flex items-center gap-2 mt-1">
-          <p className="text-fs-8" style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-sans)', fontWeight: 500 }}>
+          <p className="text-fs-8" style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-sans)', fontWeight: 500 }}>
             ${product.price.toFixed(2)}
           </p>
           <del className="text-fs-9" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>

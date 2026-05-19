@@ -15,7 +15,7 @@ export default function CategorySection() {
                 <img src={cat.icon} alt={cat.title} width={24} height={24} />
               </div>
               <div>
-                <h3 className="text-fs-8" style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-sans)' }}>
+                <h3 className="text-fs-8" style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-sans)' }}>
                   {cat.title}
                 </h3>
                 <p className="text-fs-9" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>({cat.count})</p>

@@ -17,7 +17,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'UTF-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { title: 'Anon - eCommerce Website' },
+      { title: 'NOCTE — Wholesale Fashion' },
     ],
     scripts: [
       { type: 'module', src: 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js' },

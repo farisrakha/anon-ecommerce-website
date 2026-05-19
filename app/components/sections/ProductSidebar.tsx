@@ -33,7 +33,7 @@ export default function ProductSidebar({ isOpen, onClose }: ProductSidebarProps)
         style={{ backgroundColor: 'var(--nocte-surface-1)' }}
       >
         <div className="flex items-center justify-between mb-4 lg:hidden">
-          <h2 className="text-fs-5" style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}>Category</h2>
+          <h2 className="text-fs-5" style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}>Category</h2>
           <button
             onClick={onClose}
             className="text-xl nocte-link-mid"

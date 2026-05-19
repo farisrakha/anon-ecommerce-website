@@ -28,7 +28,7 @@ export default function NewsletterModal() {
           <div className="mb-6">
             <h3
               className="text-fs-2 mb-3"
-              style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}
+              style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}
             >
               Subscribe to NOCTE
             </h3>

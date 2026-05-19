@@ -6,7 +6,7 @@ export default function BlogSection() {
       <div className="max-w-[1350px] mx-auto px-4">
         <h2
           className="text-fs-3 mb-6 text-center"
-          style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}
+          style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}
         >
           Latest Dispatches
         </h2>

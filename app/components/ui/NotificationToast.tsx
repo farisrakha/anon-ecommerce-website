@@ -29,7 +29,7 @@ export default function NotificationToast() {
 
       <div className="min-w-0">
         <p className="text-fs-9 mb-1" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>Someone just bought</p>
-        <p className="text-fs-8 mb-1" style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-sans)' }}>Rose Gold Earrings</p>
+        <p className="text-fs-8 mb-1" style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-sans)' }}>Rose Gold Earrings</p>
         <p className="text-fs-9" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>
           <time dateTime="PT2M">2 minutes</time> ago
         </p>

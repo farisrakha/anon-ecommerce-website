@@ -7,7 +7,7 @@ export default function ProductGrid() {
     <div className="mb-6">
       <h2
         className="text-fs-4 mb-4 pb-2"
-        style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-serif)', fontWeight: 400, borderBottom: '1px solid var(--nocte-border)' }}
+        style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-serif)', fontWeight: 400, borderBottom: '1px solid var(--nocte-border)' }}
       >
         New Products
       </h2>

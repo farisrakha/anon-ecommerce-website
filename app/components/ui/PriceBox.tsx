@@ -5,7 +5,7 @@ interface PriceBoxProps {
 }
 
 export default function PriceBox({ price, originalPrice, variant = 'default' }: PriceBoxProps) {
-  const priceStyle = { color: 'var(--nocte-white)', fontFamily: 'var(--nocte-sans)', fontWeight: 500 }
+  const priceStyle = { color: 'var(--nocte-black)', fontFamily: 'var(--nocte-sans)', fontWeight: 500 }
   const strikeStyle = { color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }
 
   if (variant === 'featured') {

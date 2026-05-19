@@ -36,7 +36,7 @@ export default function MobileMenuDrawer({ isOpen, onClose }: MobileMenuDrawerPr
 
       <nav className={`mobile-navigation-menu has-scrollbar ${isOpen ? 'open' : ''}`}>
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-fs-4" style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}>Menu</h2>
+          <h2 className="text-fs-4" style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}>Menu</h2>
           <button
             onClick={onClose}
             className="text-xl nocte-link-mid"

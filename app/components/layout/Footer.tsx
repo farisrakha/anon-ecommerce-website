@@ -140,7 +140,7 @@ export default function Footer() {
         <div className="max-w-[1350px] mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <img src="/images/payment.png" alt="payment method" height={28} className="h-7" />
           <p className="text-fs-9" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>
-            Copyright &copy; <a href="#" className="nocte-link-light" style={{ fontFamily: 'var(--nocte-sans)' }}>Anon</a> all rights reserved.
+            Copyright &copy; <a href="#" className="nocte-link-light" style={{ fontFamily: 'var(--nocte-sans)' }}>NOCTE</a> all rights reserved.
           </p>
         </div>
       </div>
