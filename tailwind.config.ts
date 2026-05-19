@@ -15,6 +15,20 @@ export default {
         'spanish-gray': '#9B9B9B',
         'cultured': '#F5F5F5',
         'onyx': '#3C3C3C',
+        // NOCTE design tokens
+        'nocte-black': '#0A0A0A',
+        'nocte-s1': '#111111',
+        'nocte-s2': '#1A1A1A',
+        'nocte-s3': '#2A2A2A',
+        'nocte-border': '#2A2A2A',
+        'nocte-border-subtle': '#1F1F1F',
+        'nocte-mid': '#888888',
+        'nocte-light': '#CCCCCC',
+        'nocte-white': '#FFFFFF',
+      },
+      fontFamily: {
+        serif: ['Playfair Display', 'Didot', 'Georgia', 'serif'],
+        sans: ['Inter', 'DM Sans', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'fs-1': '1.563rem',

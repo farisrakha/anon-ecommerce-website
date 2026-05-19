@@ -1,0 +1,15 @@
+:root {
+  --nocte-black: #0A0A0A;
+  --nocte-surface-1: #FFFFFF;
+  --nocte-surface-2: #F5F5F3;
+  --nocte-surface-3: #EEEDE9;
+  --nocte-border: #E0DED8;
+  --nocte-border-subtle: #EBEBEB;
+  --nocte-gray-mid: #888888;
+  --nocte-gray-light: #555555;
+  --nocte-white: #FFFFFF;
+  --nocte-serif: 'Playfair Display', 'Didot', Georgia, serif;
+  --nocte-sans: 'Inter', 'DM Sans', system-ui, sans-serif;
+  --nocte-radius: 2px;
+  --nocte-transition: 150ms ease;
+}

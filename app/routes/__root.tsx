@@ -12,6 +12,7 @@ export const Route = createRootRoute({
       { rel: 'shortcut icon', href: '/images/logo/favicon.ico', type: 'image/x-icon' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' as const },
+      { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap' },
     ],
     meta: [
       { charSet: 'UTF-8' },
@@ -32,7 +33,7 @@ function RootComponent() {
       <head>
         <HeadContent />
       </head>
-      <body className="bg-white overflow-x-hidden" style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <body className="overflow-x-hidden">
         <NewsletterModal />
         <NotificationToast />
         <Header />

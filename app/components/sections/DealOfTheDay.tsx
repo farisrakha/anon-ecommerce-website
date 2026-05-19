@@ -32,7 +32,10 @@ export default function DealOfTheDay() {
 
   return (
     <div className="mb-6">
-      <h2 className="text-fs-4 font-semibold text-eerie-black mb-4 pb-2 border-b border-cultured">
+      <h2
+        className="text-fs-4 mb-4 pb-2"
+        style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-serif)', fontWeight: 400, borderBottom: '1px solid var(--nocte-border)' }}
+      >
         Deal of the day
       </h2>
 
@@ -42,7 +45,11 @@ export default function DealOfTheDay() {
           const soldPercent = Math.round((product.sold / totalSold) * 100)
 
           return (
-            <div key={product.id} className="flex-none w-full sm:w-[calc(50%-8px)] border border-cultured rounded-md-custom overflow-hidden">
+            <div
+              key={product.id}
+              className="flex-none w-full sm:w-[calc(50%-8px)] overflow-hidden"
+              style={{ border: '1px solid var(--nocte-border)', backgroundColor: 'var(--nocte-surface-1)' }}
+            >
               <div className="aspect-square overflow-hidden">
                 <img
                   src={product.image}
@@ -55,26 +62,35 @@ export default function DealOfTheDay() {
                 <StarRating rating={product.rating} className="mb-2" />
 
                 <a href="#">
-                  <h3 className="text-fs-5 font-semibold text-eerie-black mb-2 hover:text-salmon-pink transition-colors">
+                  <h3
+                    className="text-fs-5 mb-2 nocte-link-dim"
+                    style={{ fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}
+                  >
                     {product.title}
                   </h3>
                 </a>
 
-                <p className="text-fs-8 text-sonic-silver leading-relaxed mb-4">{product.description}</p>
+                <p className="text-fs-8 leading-relaxed mb-4" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>
+                  {product.description}
+                </p>
 
                 <div className="flex items-center gap-3 mb-4">
-                  <p className="text-fs-4 font-semibold text-salmon-pink">${product.price.toFixed(2)}</p>
-                  <del className="text-fs-7 text-sonic-silver">${product.originalPrice.toFixed(2)}</del>
+                  <p className="text-fs-4" style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-sans)', fontWeight: 500 }}>
+                    ${product.price.toFixed(2)}
+                  </p>
+                  <del className="text-fs-7" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>
+                    ${product.originalPrice.toFixed(2)}
+                  </del>
                 </div>
 
-                <button className="w-full bg-salmon-pink text-white text-fs-8 font-semibold py-3 rounded-sm-custom hover:bg-bittersweet transition-colors mb-4">
-                  add to cart
+                <button className="nocte-btn-primary w-full mb-4">
+                  Add to cart
                 </button>
 
                 <div className="mb-4">
-                  <div className="flex justify-between text-fs-9 text-sonic-silver mb-2">
-                    <span>already sold: <b>{product.sold}</b></span>
-                    <span>available: <b>{product.available}</b></span>
+                  <div className="flex justify-between mb-2">
+                    <span className="nocte-label">Sold: <span style={{ color: 'var(--nocte-gray-light)' }}>{product.sold}</span></span>
+                    <span className="nocte-label">Available: <span style={{ color: 'var(--nocte-gray-light)' }}>{product.available}</span></span>
                   </div>
                   <div className="progress-bar">
                     <div className="progress-fill" style={{ width: `${soldPercent}%` }} />
@@ -82,7 +98,7 @@ export default function DealOfTheDay() {
                 </div>
 
                 <div>
-                  <p className="text-fs-9 text-sonic-silver mb-3">Hurry Up! Offer ends in:</p>
+                  <p className="nocte-label mb-3">Offer ends in:</p>
                   <div className="countdown-box">
                     {[
                       { value: days, label: 'Days' },

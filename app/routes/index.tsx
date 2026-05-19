@@ -40,7 +40,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="py-8 bg-cultured/30">
+      <div className="py-8" style={{ backgroundColor: 'var(--nocte-surface-1)' }}>
         <div className="max-w-[1350px] mx-auto px-4 flex flex-col lg:flex-row gap-6">
           <TestimonialsSection />
           <CtaBanner />

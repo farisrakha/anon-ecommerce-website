@@ -2,15 +2,21 @@ import { blogPosts } from '../../data/blogPosts'
 
 export default function BlogSection() {
   return (
-    <div className="py-12 border-t border-cultured">
+    <div className="py-12" style={{ borderTop: '1px solid var(--nocte-border)' }}>
       <div className="max-w-[1350px] mx-auto px-4">
-        <h2 className="text-fs-3 font-semibold text-eerie-black mb-6 text-center">Latest Blog</h2>
+        <h2
+          className="text-fs-3 mb-6 text-center"
+          style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}
+        >
+          Latest Dispatches
+        </h2>
 
         <div className="flex overflow-x-auto gap-5 has-scrollbar pb-2">
           {blogPosts.map((post) => (
             <div
               key={post.id}
-              className="flex-none w-[280px] border border-cultured rounded-md-custom overflow-hidden hover:shadow-md transition-shadow"
+              className="flex-none w-[280px] overflow-hidden"
+              style={{ border: '1px solid var(--nocte-border)', backgroundColor: 'var(--nocte-surface-1)' }}
             >
               <a href="#" className="block overflow-hidden aspect-[4/3]">
                 <img
@@ -22,21 +28,19 @@ export default function BlogSection() {
               </a>
 
               <div className="p-4">
-                <a
-                  href="#"
-                  className="inline-block bg-salmon-pink/10 text-salmon-pink text-fs-10 font-semibold px-3 py-1 rounded-full mb-2 capitalize"
-                >
-                  {post.category}
-                </a>
+                <span className="nocte-badge mb-3 inline-block">{post.category}</span>
 
                 <a href="#">
-                  <h3 className="text-fs-8 font-semibold text-eerie-black mb-2 line-clamp-2 hover:text-salmon-pink transition-colors leading-relaxed">
+                  <h3
+                    className="text-fs-8 mb-2 line-clamp-2 leading-relaxed nocte-link-dim"
+                    style={{ fontFamily: 'var(--nocte-sans)', fontWeight: 400 }}
+                  >
                     {post.title}
                   </h3>
                 </a>
 
-                <p className="text-fs-9 text-sonic-silver">
-                  By <cite className="not-italic font-medium text-eerie-black">{post.author}</cite>{' '}
+                <p className="text-fs-9" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>
+                  By <cite className="not-italic" style={{ color: 'var(--nocte-gray-light)' }}>{post.author}</cite>{' '}
                   / <time dateTime={post.dateIso}>{post.dateDisplay}</time>
                 </p>
               </div>

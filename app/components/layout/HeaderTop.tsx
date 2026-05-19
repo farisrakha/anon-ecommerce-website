@@ -1,6 +1,6 @@
 export default function HeaderTop() {
   return (
-    <div className="bg-eerie-black py-2">
+    <div className="py-2" style={{ backgroundColor: 'var(--nocte-surface-2)' }}>
       <div className="max-w-[1350px] mx-auto px-4 flex items-center justify-between gap-4">
 
         <ul className="hidden lg:flex items-center gap-3">
@@ -14,7 +14,7 @@ export default function HeaderTop() {
               <a
                 href="#"
                 aria-label={label}
-                className="text-white/70 hover:text-salmon-pink transition-colors text-base flex"
+                className="flex nocte-link-mid"
               >
                 <ion-icon name={icon} />
               </a>
@@ -22,26 +22,28 @@ export default function HeaderTop() {
           ))}
         </ul>
 
-        <p className="hidden xs:block text-white/80 text-fs-9 text-center">
-          <b className="text-sandy-brown">Free Shipping</b> This Week Order Over - $55
+        <p className="hidden xs:block text-fs-9 text-center nocte-label">
+          Free Shipping — this week, orders over $55
         </p>
 
         <div className="hidden sm:flex items-center gap-3">
           <select
             name="currency"
-            className="bg-transparent text-white/80 text-fs-9 outline-none cursor-pointer"
+            className="bg-transparent text-fs-9 outline-none cursor-pointer"
+            style={{ color: 'var(--nocte-gray-mid)' }}
           >
-            <option value="usd" className="text-eerie-black">USD $</option>
-            <option value="eur" className="text-eerie-black">EUR €</option>
+            <option value="usd" style={{ backgroundColor: 'var(--nocte-surface-1)' }}>USD $</option>
+            <option value="eur" style={{ backgroundColor: 'var(--nocte-surface-1)' }}>EUR €</option>
           </select>
 
           <select
             name="language"
-            className="bg-transparent text-white/80 text-fs-9 outline-none cursor-pointer"
+            className="bg-transparent text-fs-9 outline-none cursor-pointer"
+            style={{ color: 'var(--nocte-gray-mid)' }}
           >
-            <option value="en-US" className="text-eerie-black">English</option>
-            <option value="es-ES" className="text-eerie-black">Español</option>
-            <option value="fr" className="text-eerie-black">Français</option>
+            <option value="en-US" style={{ backgroundColor: 'var(--nocte-surface-1)' }}>English</option>
+            <option value="es-ES" style={{ backgroundColor: 'var(--nocte-surface-1)' }}>Español</option>
+            <option value="fr" style={{ backgroundColor: 'var(--nocte-surface-1)' }}>Français</option>
           </select>
         </div>
 

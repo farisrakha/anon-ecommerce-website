@@ -5,13 +5,16 @@ import PriceBox from '../ui/PriceBox'
 export default function ProductGrid() {
   return (
     <div className="mb-6">
-      <h2 className="text-fs-4 font-semibold text-eerie-black mb-4 pb-2 border-b border-cultured">
+      <h2
+        className="text-fs-4 mb-4 pb-2"
+        style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-serif)', fontWeight: 400, borderBottom: '1px solid var(--nocte-border)' }}
+      >
         New Products
       </h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-4">
         {newProducts.map((product) => (
-          <div key={product.id} className="border border-cultured rounded-md-custom overflow-hidden group">
+          <div key={product.id} className="nocte-card overflow-hidden group">
             <div className="showcase-banner aspect-square">
               <img
                 src={product.image}
@@ -25,33 +28,40 @@ export default function ProductGrid() {
               />
 
               {product.badge && (
-                <p className={`showcase-badge ${product.badge.style === 'angle-black' ? 'angle-black' : product.badge.style === 'angle-pink' ? 'angle-pink' : ''}`}>
+                <p className="showcase-badge">
                   {product.badge.text}
                 </p>
               )}
 
               <div className="showcase-actions">
-                <button className="showcase-action-btn" title="Add to wishlist">
+                <button className="showcase-action-btn" aria-label="Add to wishlist">
                   <ion-icon name="heart-outline" />
                 </button>
-                <button className="showcase-action-btn" title="Quick view">
+                <button className="showcase-action-btn" aria-label="Quick view">
                   <ion-icon name="eye-outline" />
                 </button>
-                <button className="showcase-action-btn" title="Compare">
+                <button className="showcase-action-btn" aria-label="Compare">
                   <ion-icon name="repeat-outline" />
                 </button>
-                <button className="showcase-action-btn" title="Add to cart">
+                <button className="showcase-action-btn" aria-label="Add to cart">
                   <ion-icon name="bag-add-outline" />
                 </button>
               </div>
             </div>
 
             <div className="p-3">
-              <a href="#" className="text-fs-9 text-sonic-silver hover:text-salmon-pink transition-colors capitalize block mb-1">
+              <a
+                href="#"
+                className="text-fs-9 capitalize block mb-1 nocte-link-mid"
+                style={{ fontFamily: 'var(--nocte-sans)' }}
+              >
                 {product.category}
               </a>
               <a href="#">
-                <h3 className="text-fs-8 font-medium text-eerie-black mb-2 line-clamp-2 hover:text-salmon-pink transition-colors">
+                <h3
+                  className="text-fs-8 mb-2 line-clamp-2 nocte-link-dim"
+                  style={{ fontFamily: 'var(--nocte-sans)', fontWeight: 400 }}
+                >
                   {product.title}
                 </h3>
               </a>

@@ -33,19 +33,29 @@ export default function DesktopNav() {
     },
   ]
 
+  const linkStyle = { fontFamily: 'var(--nocte-sans)', fontSize: '13px', letterSpacing: '0.04em' }
+
   return (
-    <nav className="hidden lg:block bg-salmon-pink">
+    <nav className="hidden lg:block" style={{ backgroundColor: 'var(--nocte-surface-1)', borderBottom: '1px solid var(--nocte-border)' }}>
       <div className="max-w-[1350px] mx-auto px-4">
         <ul className="flex items-center">
 
           <li className="desktop-nav-item">
-            <a href="#" className="block px-5 py-3 text-white text-fs-7 font-medium hover:bg-bittersweet transition-colors">
+            <a
+              href="#"
+              className="block px-5 py-3 nocte-link-light"
+              style={linkStyle}
+            >
               Home
             </a>
           </li>
 
           <li className="desktop-nav-item">
-            <a href="#" className="block px-5 py-3 text-white text-fs-7 font-medium hover:bg-bittersweet transition-colors">
+            <a
+              href="#"
+              className="block px-5 py-3 nocte-link-light"
+              style={linkStyle}
+            >
               Categories
             </a>
             <div className="dropdown-panel">
@@ -53,16 +63,28 @@ export default function DesktopNav() {
                 {panelColumns.map((col) => (
                   <ul key={col.title}>
                     <li className="mb-3">
-                      <a href="#" className="text-fs-7 font-semibold text-eerie-black hover:text-salmon-pink">{col.title}</a>
+                      <a
+                        href="#"
+                        className="text-fs-7 nocte-link-dim"
+                        style={{ fontFamily: 'var(--nocte-sans)' }}
+                      >
+                        {col.title}
+                      </a>
                     </li>
                     {col.items.map((item) => (
                       <li key={item} className="mb-1">
-                        <a href="#" className="text-fs-8 text-sonic-silver hover:text-salmon-pink transition-colors">{item}</a>
+                        <a
+                          href="#"
+                          className="text-fs-8 nocte-link-mid"
+                          style={{ fontFamily: 'var(--nocte-sans)' }}
+                        >
+                          {item}
+                        </a>
                       </li>
                     ))}
-                    <li className="mt-2">
+                    <li className="mt-3">
                       <a href="#">
-                        <img src={col.banner} alt={col.bannerAlt} width={250} height={119} className="rounded-sm-custom w-full" />
+                        <img src={col.banner} alt={col.bannerAlt} width={250} height={119} className="w-full" />
                       </a>
                     </li>
                   </ul>
@@ -73,13 +95,20 @@ export default function DesktopNav() {
 
           {Object.entries(dropdownItems).map(([title, items]) => (
             <li key={title} className="desktop-nav-item">
-              <a href="#" className="block px-5 py-3 text-white text-fs-7 font-medium hover:bg-bittersweet transition-colors">
+              <a
+                href="#"
+                className="block px-5 py-3 nocte-link-light"
+                style={linkStyle}
+              >
                 {title}
               </a>
               <ul className="dropdown-list">
                 {items.map((item) => (
                   <li key={item}>
-                    <a href="#" className="block px-5 py-2 text-fs-8 text-sonic-silver hover:text-salmon-pink hover:bg-cultured transition-colors">
+                    <a
+                      href="#"
+                      className="block px-5 py-2 text-fs-8"
+                    >
                       {item}
                     </a>
                   </li>
@@ -89,14 +118,22 @@ export default function DesktopNav() {
           ))}
 
           <li className="desktop-nav-item">
-            <a href="#" className="block px-5 py-3 text-white text-fs-7 font-medium hover:bg-bittersweet transition-colors">
+            <a
+              href="#"
+              className="block px-5 py-3 nocte-link-light"
+              style={linkStyle}
+            >
               Blog
             </a>
           </li>
 
           <li className="desktop-nav-item">
-            <a href="#" className="block px-5 py-3 text-white text-fs-7 font-medium hover:bg-bittersweet transition-colors">
-              Hot Offers
+            <a
+              href="#"
+              className="block px-5 py-3 nocte-link-light"
+              style={linkStyle}
+            >
+              New Arrivals
             </a>
           </li>
 

@@ -1,6 +1,6 @@
 export default function CtaBanner() {
   return (
-    <div className="relative rounded-md-custom overflow-hidden flex-1 min-h-[200px]">
+    <div className="relative overflow-hidden flex-1 min-h-[200px]">
       <img
         src="/images/cta-banner.jpg"
         alt="summer collection"
@@ -8,14 +8,19 @@ export default function CtaBanner() {
       />
       <a
         href="#"
-        className="absolute inset-0 flex flex-col items-start justify-center p-8 bg-black/20 hover:bg-black/30 transition-colors"
+        className="absolute inset-0 flex flex-col items-start justify-center p-8 nocte-cta-overlay"
       >
-        <p className="text-fs-8 font-semibold text-white/90 uppercase tracking-wide mb-1">25% Discount</p>
-        <h2 className="text-fs-2 font-bold text-white mb-2">Summer collection</h2>
-        <p className="text-fs-7 text-white/90 mb-4">Starting @ $10</p>
-        <button className="bg-white text-eerie-black text-fs-8 font-semibold px-5 py-2 rounded-sm-custom hover:bg-salmon-pink hover:text-white transition-colors">
-          Shop now
-        </button>
+        <p className="nocte-label mb-2">25% Discount</p>
+        <h2
+          className="mb-2"
+          style={{ fontFamily: 'var(--nocte-serif)', color: 'var(--nocte-white)', fontSize: '1.75rem', fontWeight: 400 }}
+        >
+          Summer collection
+        </h2>
+        <p className="text-fs-7 mb-5" style={{ color: 'var(--nocte-gray-light)', fontFamily: 'var(--nocte-sans)' }}>
+          Starting at $10
+        </p>
+        <span className="nocte-btn-primary">Shop now</span>
       </a>
     </div>
   )

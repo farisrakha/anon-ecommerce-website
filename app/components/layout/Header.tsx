@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 bg-white shadow-sm">
+      <header className="sticky top-0 z-40" style={{ backgroundColor: 'var(--nocte-surface-1)', borderBottom: '1px solid var(--nocte-border)' }}>
         <HeaderTop />
         <HeaderMain />
         <DesktopNav />

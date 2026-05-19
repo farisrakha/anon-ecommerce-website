@@ -10,14 +10,14 @@ export default function NotificationToast() {
   return (
     <div className="notification-toast">
       <button
-        className="absolute top-2 right-2 w-7 h-7 flex items-center justify-center text-sonic-silver hover:text-eerie-black"
+        className="absolute top-2 right-2 w-7 h-7 flex items-center justify-center nocte-link-mid"
         onClick={() => setClosed(true)}
         aria-label="Close notification"
       >
         <ion-icon name="close-outline" />
       </button>
 
-      <div className="w-20 h-16 shrink-0 rounded overflow-hidden">
+      <div className="w-20 h-16 shrink-0 overflow-hidden">
         <img
           src="/images/products/jewellery-1.jpg"
           alt="Rose Gold Earrings"
@@ -28,10 +28,10 @@ export default function NotificationToast() {
       </div>
 
       <div className="min-w-0">
-        <p className="text-fs-9 text-sonic-silver mb-1">Someone in new just bought</p>
-        <p className="text-fs-8 font-semibold text-eerie-black mb-1">Rose Gold Earrings</p>
-        <p className="text-fs-9 text-sonic-silver">
-          <time dateTime="PT2M">2 Minutes</time> ago
+        <p className="text-fs-9 mb-1" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>Someone just bought</p>
+        <p className="text-fs-8 mb-1" style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-sans)' }}>Rose Gold Earrings</p>
+        <p className="text-fs-9" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>
+          <time dateTime="PT2M">2 minutes</time> ago
         </p>
       </div>
     </div>

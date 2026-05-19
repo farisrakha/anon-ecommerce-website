@@ -26,23 +26,25 @@ export default function NewsletterModal() {
 
         <div className="flex flex-col justify-center p-8 min-w-0">
           <div className="mb-6">
-            <h3 className="text-fs-2 font-semibold text-eerie-black mb-3">Subscribe Newsletter.</h3>
-            <p className="text-fs-7 text-sonic-silver leading-relaxed">
-              Subscribe the <b>Anon</b> to get latest products and discount update.
+            <h3
+              className="text-fs-2 mb-3"
+              style={{ color: 'var(--nocte-white)', fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}
+            >
+              Subscribe to NOCTE
+            </h3>
+            <p className="text-fs-7 leading-relaxed" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>
+              New arrivals, exclusive access, and wholesale updates — no noise.
             </p>
           </div>
 
           <form onSubmit={(e) => e.preventDefault()}>
             <input
               type="email"
-              placeholder="Email Address"
+              placeholder="Email address"
               required
-              className="w-full border border-cultured rounded-sm-custom px-4 py-3 text-fs-7 outline-none focus:border-salmon-pink mb-4"
+              className="nocte-input mb-4"
             />
-            <button
-              type="submit"
-              className="w-full bg-salmon-pink text-white font-semibold py-3 rounded-sm-custom hover:bg-bittersweet transition-colors duration-200 text-fs-7 uppercase tracking-wide"
-            >
+            <button type="submit" className="nocte-btn-primary w-full">
               Subscribe
             </button>
           </form>

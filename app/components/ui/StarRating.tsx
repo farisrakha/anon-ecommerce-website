@@ -10,16 +10,16 @@ export default function StarRating({ rating, className = '' }: StarRatingProps) 
 
   for (let i = 0; i < 5; i++) {
     if (i < full) {
-      stars.push(<ion-icon key={i} name="star" class="text-sandy-brown" />)
+      stars.push(<ion-icon key={i} name="star" style={{ color: 'var(--nocte-gray-mid)' }} />)
     } else if (i === full && hasHalf) {
-      stars.push(<ion-icon key={i} name="star-half-outline" class="text-sandy-brown" />)
+      stars.push(<ion-icon key={i} name="star-half-outline" style={{ color: 'var(--nocte-gray-mid)' }} />)
     } else {
-      stars.push(<ion-icon key={i} name="star-outline" class="text-sandy-brown" />)
+      stars.push(<ion-icon key={i} name="star-outline" style={{ color: 'var(--nocte-surface-3)' }} />)
     }
   }
 
   return (
-    <div className={`flex items-center gap-px text-xs text-sandy-brown ${className}`}>
+    <div className={`flex items-center gap-px text-xs ${className}`}>
       {stars}
     </div>
   )
