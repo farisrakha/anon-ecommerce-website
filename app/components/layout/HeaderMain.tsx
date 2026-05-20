@@ -1,11 +1,18 @@
+import { Link } from '@tanstack/react-router'
+
 export default function HeaderMain() {
   return (
     <div className="py-4" style={{ borderBottom: '1px solid var(--nocte-border)' }}>
       <div className="max-w-[1350px] mx-auto px-4 flex items-center gap-6">
 
-        <a href="#" className="shrink-0">
-          <img src="/images/logo/logo.svg" alt="NOCTE logo" width={120} height={36} />
-        </a>
+        <Link to="/" className="shrink-0">
+          <img
+            src="/images/logo/nocte-logo.png"
+            alt="NOCTE"
+            className="object-contain"
+            style={{ height: 40, width: 'auto' }}
+          />
+        </Link>
 
         <div
           className="flex-1 flex items-center overflow-hidden max-w-[500px] mx-auto"
@@ -16,11 +23,11 @@ export default function HeaderMain() {
             name="search"
             placeholder="Search products..."
             className="flex-1 px-4 py-2 text-fs-7 outline-none"
-            style={{ backgroundColor: 'var(--nocte-surface-2)', color: 'var(--nocte-white)', fontFamily: 'var(--nocte-sans)' }}
+            style={{ backgroundColor: 'var(--nocte-surface-2)', color: 'var(--nocte-black)', fontFamily: 'var(--nocte-sans)' }}
           />
           <button
             className="px-4 py-2 nocte-hover-opacity"
-            style={{ backgroundColor: 'var(--nocte-white)', color: 'var(--nocte-black)' }}
+            style={{ backgroundColor: 'var(--nocte-surface-3)', color: 'var(--nocte-black)' }}
             aria-label="Search"
           >
             <ion-icon name="search-outline" />
