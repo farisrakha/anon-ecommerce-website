@@ -135,7 +135,7 @@ export default function FeaturedProducts() {
                   display: 'block',
                   textDecoration: 'none',
                   opacity: 0,
-                  animation: `fadeInUp 0.6s ease-out ${i * 150}ms backwards`,
+                  animation: `fadeInUp 0.6s ease-out ${i * 150}ms forwards`,
                 }}
                 onMouseEnter={() => setHoveredProductId(product.id)}
                 onMouseLeave={() => setHoveredProductId(null)}
