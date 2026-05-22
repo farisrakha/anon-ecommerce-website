@@ -11,20 +11,16 @@ function ShowcaseItem({ product }: { product: Product }) {
       className="flex items-center gap-3 py-3 nocte-link-dim"
       style={{ borderBottom: '1px solid var(--nocte-border)' }}
     >
-      {/* Placeholder thumbnail */}
       <div
-        className="shrink-0 w-[70px] h-[70px] flex items-center justify-center overflow-hidden"
-        style={{
-          border: '1px solid var(--nocte-border)',
-          backgroundColor: 'var(--nocte-surface-3)',
-        }}
+        className="shrink-0 w-[70px] h-[70px] overflow-hidden"
+        style={{ border: '1px solid var(--nocte-border)' }}
       >
-        <span
-          className="nocte-label text-center px-1"
-          style={{ color: 'var(--nocte-gray-mid)', fontSize: 9 }}
-        >
-          {product.name.split(' ').slice(0, 2).join(' ')}
-        </span>
+        <img
+          src={product.images[0]}
+          alt={product.name}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
       </div>
 
       <div className="min-w-0">

@@ -1,10 +1,27 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { dealProducts } from '../../data/products'
+import { products } from '../../data/nocte-mock'
 import StarRating from '../ui/StarRating'
 
 const DEAL_END = new Date(Date.now() + 360 * 24 * 60 * 60 * 1000)
+
+const dealItems = [
+  {
+    product: products[4], // Cashmere Blend Coat
+    description: 'Premium cashmere blend in a relaxed tailored silhouette. Structured collar, clean seaming, seasonal exclusive.',
+    sold: 28,
+    available: 12,
+    rating: 4.8,
+  },
+  {
+    product: products[6], // Silk Slip Dress
+    description: 'Fluid Italian silk in a minimalist slip silhouette. Adjustable straps, invisible hem, fully lined.',
+    sold: 15,
+    available: 21,
+    rating: 4.9,
+  },
+]
 
 function useCountdown(endDate: Date) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
@@ -36,13 +53,13 @@ export default function DealOfTheDay() {
         className="text-fs-4 mb-4 pb-2"
         style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-serif)', fontWeight: 400, borderBottom: '1px solid var(--nocte-border)' }}
       >
-        Deal of the day
+        Featured This Season
       </h2>
 
       <div className="flex overflow-x-auto has-scrollbar gap-4">
-        {dealProducts.map((product) => {
-          const totalSold = product.sold + product.available
-          const soldPercent = Math.round((product.sold / totalSold) * 100)
+        {dealItems.map(({ product, description, sold, available, rating }) => {
+          const totalSold = sold + available
+          const soldPercent = Math.round((sold / totalSold) * 100)
 
           return (
             <div
@@ -52,45 +69,45 @@ export default function DealOfTheDay() {
             >
               <div className="aspect-square overflow-hidden">
                 <img
-                  src={product.image}
-                  alt={product.title}
+                  src={product.images[0]}
+                  alt={product.name}
                   className="w-full h-full object-cover"
                 />
               </div>
 
               <div className="p-5">
-                <StarRating rating={product.rating} className="mb-2" />
+                <StarRating rating={rating} className="mb-2" />
 
                 <a href="#">
                   <h3
                     className="text-fs-5 mb-2 nocte-link-dim"
                     style={{ fontFamily: 'var(--nocte-serif)', fontWeight: 400 }}
                   >
-                    {product.title}
+                    {product.name}
                   </h3>
                 </a>
 
                 <p className="text-fs-8 leading-relaxed mb-4" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>
-                  {product.description}
+                  {description}
                 </p>
 
                 <div className="flex items-center gap-3 mb-4">
                   <p className="text-fs-4" style={{ color: 'var(--nocte-black)', fontFamily: 'var(--nocte-sans)', fontWeight: 500 }}>
-                    ${product.price.toFixed(2)}
+                    €{product.tiers[0].unitPrice.toFixed(2)}
                   </p>
                   <del className="text-fs-7" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>
-                    ${product.originalPrice.toFixed(2)}
+                    RRP €{product.suggestedRetail.toFixed(2)}
                   </del>
                 </div>
 
                 <button className="nocte-btn-primary w-full mb-4">
-                  Add to cart
+                  Add to order
                 </button>
 
                 <div className="mb-4">
                   <div className="flex justify-between mb-2">
-                    <span className="nocte-label">Sold: <span style={{ color: 'var(--nocte-gray-light)' }}>{product.sold}</span></span>
-                    <span className="nocte-label">Available: <span style={{ color: 'var(--nocte-gray-light)' }}>{product.available}</span></span>
+                    <span className="nocte-label">Ordered: <span style={{ color: 'var(--nocte-gray-light)' }}>{sold}</span></span>
+                    <span className="nocte-label">Available: <span style={{ color: 'var(--nocte-gray-light)' }}>{available}</span></span>
                   </div>
                   <div className="progress-bar">
                     <div className="progress-fill" style={{ width: `${soldPercent}%` }} />

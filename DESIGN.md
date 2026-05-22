@@ -16,27 +16,26 @@ is implemented in code to capture real tokens.
 
 ## Color Strategy
 
-**Restrained monochromatic.** No accent color. No gradients. Contrast is achieved
-entirely through value — the step from surface-3 to foreground must feel like
-light on obsidian. Every tint carries a near-zero cool-blue chroma (0.006) to
-prevent the palette from reading as pure printer black.
+**Warm off-white ground. The showroom is always lit.** Surfaces are paper-white
+with near-zero warm chroma; foreground is near-black. Contrast through value,
+never color. No accent color. No decorative gradients.
 
-| Token | OKLCH | Approx Hex | Role |
+| Token | CSS Var | Approx Hex | Role |
 |---|---|---|---|
-| `canvas` | `oklch(6.5% 0.006 264)` | `#0A0A0A` | Page background |
-| `surface-1` | `oklch(10.5% 0.006 264)` | `#1A1A1A` | Primary surfaces, cards |
-| `surface-2` | `oklch(17% 0.006 264)` | `#2A2A2A` | Elevated surfaces, drawers |
-| `surface-3` | `oklch(23% 0.006 264)` | `#3A3A3A` | Borders, dividers, inputs |
-| `muted` | `oklch(56% 0.005 264)` | `#888888` | Secondary text, metadata |
-| `subtle` | `oklch(81% 0.005 264)` | `#CCCCCC` | Tertiary text, labels, captions |
-| `foreground` | `oklch(98% 0.006 264)` | `#FAFAFA` | Primary text |
-| `accent` | none | — | Monochromatic only |
+| `black` | `--nocte-black` | `#0A0A0A` | Primary text, foreground |
+| `surface-1` | `--nocte-surface-1` | `#FFFFFF` | Page background, primary surfaces |
+| `surface-2` | `--nocte-surface-2` | `#F5F5F3` | Secondary surfaces, section bands |
+| `surface-3` | `--nocte-surface-3` | `#EEEDE9` | Tertiary surfaces, inputs |
+| `border` | `--nocte-border` | `#E0DED8` | Dividers, card borders |
+| `gray-mid` | `--nocte-gray-mid` | `#767676` | Secondary text, metadata |
+| `gray-light` | `--nocte-gray-light` | `#555555` | Tertiary text, labels |
 
 **Rules:**
-- Never use pure `#000` or `#fff` — always tinted toward `264` (cool blue)
-- Hover states: raise surface value by one step (canvas → surface-1)
-- Active/selected states: invert locally (foreground bg, canvas text)
+- Never use pure `#000` or `#fff` — tint surfaces toward warm (slight yellow-orange at <0.004 chroma)
+- Hover states: step down one surface level (surface-1 → surface-2)
+- Active/selected states: invert locally (black bg, surface-1 text)
 - No border-left/border-right accents — full borders or nothing
+- Photography scrims: `rgba(0,0,0,0.35–0.55)` gradient from-transparent to-black is allowed as a readability tool on full-bleed imagery — not a surface treatment, only on top of photographs
 
 ---
 
@@ -154,6 +153,6 @@ in a narrow container. Let content breathe against the dark canvas.
 - Identical card grids — same-sized icon + heading + text repeated
 - Color accent on hover — hover is structural, not chromatic
 - Poppins, Inter as heading font — UI sans only; Playfair Display for display
-- White or light-gray backgrounds — canvas is always dark
+- Pure white with zero chroma — always tint backgrounds toward warm (slight yellow-orange at <0.004 chroma); cold grays read digital, warm off-whites read material
 - Lifestyle photography as decoration — if photography, it must earn its place
 - Social proof clusters (star ratings, review counts) in primary product views

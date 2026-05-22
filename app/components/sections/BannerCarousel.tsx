@@ -1,71 +1,46 @@
-const slides = [
-  {
-    id: 1,
-    image: '/images/banner-1.jpg',
-    alt: "women's latest fashion sale",
-    subtitle: 'New season',
-    title: "Women's latest\nfashion edit",
-    price: '20',
-  },
-  {
-    id: 2,
-    image: '/images/banner-2.jpg',
-    alt: 'modern sunglasses',
-    subtitle: 'Accessories',
-    title: 'Modern\nsunglasses',
-    price: '15',
-  },
-  {
-    id: 3,
-    image: '/images/banner-3.jpg',
-    alt: 'new fashion summer sale',
-    subtitle: 'Summer edit',
-    title: 'New fashion\nsummer sale',
-    price: '29.99',
-  },
-]
+import { collections } from '../../data/nocte-mock'
+
+const subtitles: Record<string, string> = {
+  'col-ss25': 'Discover our spring season',
+  'col-fw25': 'Premium materials, wholesale pricing',
+  'col-pf25': 'Now available for pre-order',
+}
+
+const ctas: Record<string, string> = {
+  'col-ss25': 'EXPLORE',
+  'col-fw25': 'SHOP NOW',
+  'col-pf25': 'PRE-ORDER',
+}
 
 export default function BannerCarousel() {
   return (
-    <div style={{ backgroundColor: 'var(--nocte-surface-2)' }} className="py-6">
+    <section id="collections" className="py-12" style={{ backgroundColor: 'var(--nocte-surface-2)' }}>
       <div className="max-w-[1350px] mx-auto px-4">
-        <div className="banner-slider-container flex overflow-x-auto gap-4 has-scrollbar snap-x snap-mandatory">
-          {slides.map((slide) => (
-            <div
-              key={slide.id}
-              className="banner-slider-item relative flex-none w-full overflow-hidden"
-              style={{ minWidth: '100%' }}
-            >
-              <img
-                src={slide.image}
-                alt={slide.alt}
-                className="w-full h-[200px] xs:h-[280px] md:h-[360px] object-cover"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {collections.map(c => (
+            <div key={c.id} className="relative overflow-hidden" style={{ height: 420 }}>
+              <img src={c.heroImage} alt={c.title} className="w-full h-full object-cover" />
+              <div
+                className="absolute inset-0"
+                style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 55%)' }}
               />
-              <div className="absolute top-1/2 -translate-y-1/2 left-8 md:left-16">
-                <p className="nocte-label mb-3">{slide.subtitle}</p>
-                <h2
-                  className="mb-4 max-w-[280px] leading-tight"
-                  style={{
-                    fontFamily: 'var(--nocte-serif)',
-                    color: 'var(--nocte-black)',
-                    fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
-                    fontWeight: 400,
-                    whiteSpace: 'pre-line',
-                  }}
+              <div className="absolute bottom-0 left-0 p-6">
+                <p className="nocte-label mb-2" style={{ color: 'rgba(255,255,255,0.65)' }}>{c.season}</p>
+                <h3
+                  className="mb-3 leading-tight"
+                  style={{ fontFamily: 'var(--nocte-serif)', fontSize: 22, fontWeight: 400, color: '#FAFAFA' }}
                 >
-                  {slide.title}
-                </h2>
-                <p className="text-fs-8 mb-5" style={{ color: 'var(--nocte-gray-mid)', fontFamily: 'var(--nocte-sans)' }}>
-                  Starting at ${slide.price}
+                  {c.title}
+                </h3>
+                <p className="mb-4 text-sm" style={{ fontFamily: 'var(--nocte-sans)', color: 'rgba(255,255,255,0.65)' }}>
+                  {subtitles[c.id]}
                 </p>
-                <a href="#" className="nocte-btn-primary">
-                  Shop now
-                </a>
+                <a href="#" className="nocte-btn-primary" style={{ fontSize: 11 }}>{ctas[c.id]}</a>
               </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

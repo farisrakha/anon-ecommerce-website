@@ -26,17 +26,13 @@ export default function ProductGrid() {
               params={{ id: product.id }}
               className="nocte-card overflow-hidden block"
             >
-              {/* Placeholder image */}
-              <div
-                className="w-full aspect-square flex items-center justify-center"
-                style={{ backgroundColor: 'var(--nocte-surface-3)' }}
-              >
-                <span
-                  className="nocte-label text-center px-3"
-                  style={{ color: 'var(--nocte-gray-mid)' }}
-                >
-                  {product.name}
-                </span>
+              <div className="w-full aspect-square overflow-hidden">
+                <img
+                  src={product.images[0]}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
 
               <div className="p-3 flex flex-col gap-2">
