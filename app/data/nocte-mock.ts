@@ -473,10 +473,10 @@ export type FeaturedCategoryId = typeof featuredCategories[number]['id']
 
 export const featuredProducts: Record<FeaturedCategoryId, { id: string; name: string; origin: string; image: string }[]> = {
   shirt: [
-    { id: 'feat-shirt-001', name: 'Unisex Logo Tee',        origin: 'Paris, France',         image: '/images/featured/shirt/shirt-1.jpg' },
-    { id: 'feat-shirt-002', name: 'Relaxed Oxford Shirt',   origin: 'Milan, Italy',          image: '/images/featured/shirt/shirt-2.jpg' },
-    { id: 'feat-shirt-003', name: 'Linen Mockup Shirt',     origin: 'Copenhagen, Denmark',   image: '/images/featured/shirt/shirt-3.jpg' },
-    { id: 'feat-shirt-004', name: 'Cotton Oversized Tee',   origin: 'Barcelona, Spain',      image: '/images/featured/shirt/shirt-4.jpg' },
+    { id: 'feat-shirt-001', name: 'Classic Oxford Shirt',   origin: 'Los Angeles, California', image: '/images/featured/shirt/shirt-1.jpg' },
+    { id: 'feat-shirt-002', name: 'Linen Casual Shirt',     origin: 'Paris, France',           image: '/images/featured/shirt/shirt-2.jpg' },
+    { id: 'feat-shirt-003', name: 'Silk Button-Up',         origin: 'Milan, Italy',            image: '/images/featured/shirt/shirt-3.jpg' },
+    { id: 'feat-shirt-004', name: 'Cotton Blend Shirt',     origin: 'Copenhagen, Denmark',     image: '/images/featured/shirt/shirt-4.jpg' },
   ],
   hoodie: [
     { id: 'feat-hoodie-001', name: 'Classic Pullover',      origin: 'Tokyo, Japan',          image: '/images/featured/hoodie/hoodie-1.jpg' },
