@@ -21,10 +21,6 @@ function parseArr(v: unknown): string[] {
   return []
 }
 
-// Collections with at least one product — used for filter sidebar season options (excludes Summer)
-const filterableCollections = collections.filter(c =>
-  products.some(p => p.collectionId === c.id)
-)
 
 export const Route = createFileRoute('/')({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -146,7 +142,7 @@ function HomePage() {
               onClearAll={clearAll}
               products={products}
               suppliers={suppliers}
-              collections={filterableCollections}
+              collections={collections}
               mobileOpen={mobileFiltersOpen}
               onMobileClose={() => setMobileFiltersOpen(false)}
             />

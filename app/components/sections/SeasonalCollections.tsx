@@ -36,7 +36,6 @@ function SeasonCard({ collection, cardProducts, view, dimmed }: {
   dimmed: boolean
 }) {
   const supplier = getSupplierById(collection.supplierId)
-  const firstProductId = collection.productIds[0] ?? 'prd-001'
 
   if (view === 'list') {
     return (
@@ -82,8 +81,8 @@ function SeasonCard({ collection, cardProducts, view, dimmed }: {
             )}
           </div>
           <Link
-            to="/products/$id"
-            params={{ id: firstProductId }}
+            to="/collections/$id"
+            params={{ id: collection.id }}
             className="nocte-btn-primary"
             style={{ fontSize: 11, pointerEvents: dimmed ? 'none' : 'auto' }}
           >
@@ -161,8 +160,8 @@ function SeasonCard({ collection, cardProducts, view, dimmed }: {
 
         <div className="mt-auto pt-3">
           <Link
-            to="/products/$id"
-            params={{ id: firstProductId }}
+            to="/collections/$id"
+            params={{ id: collection.id }}
             className="nocte-btn-primary w-full text-center block"
             style={{ fontSize: 11, pointerEvents: dimmed ? 'none' : 'auto' }}
           >
