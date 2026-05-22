@@ -136,7 +136,7 @@ function HomePage() {
 
       <section id="catalog" style={{ backgroundColor: 'var(--nocte-surface-1)' }}>
         <div className="max-w-[1350px] mx-auto px-4 py-10 flex flex-col lg:flex-row gap-8">
-          <aside className="shrink-0" style={{ width: 260 }}>
+          <aside className="shrink-0 hidden lg:block" style={{ width: 260 }}>
             <FilterSidebar
               filters={filters}
               onChange={setFilters}

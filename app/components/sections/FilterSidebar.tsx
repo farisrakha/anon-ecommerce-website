@@ -160,10 +160,11 @@ export default function FilterSidebar({
         {open.location && (
           <div className="py-3 flex flex-col gap-2">
             {Object.entries(locationCounts).map(([country, count]) => (
-              <label key={country} className="flex items-center justify-between cursor-pointer">
-                <div className="flex items-center gap-2">
+              <label key={country} className="flex items-center justify-between cursor-pointer" style={{ minWidth: 0 }}>
+                <div className="flex items-center gap-2" style={{ minWidth: 0, overflow: 'hidden' }}>
                   <input
                     type="checkbox"
+                    className="shrink-0"
                     checked={filters.locations.includes(country)}
                     onChange={e => {
                       const next = e.target.checked
@@ -173,9 +174,9 @@ export default function FilterSidebar({
                     }}
                     style={{ accentColor: 'var(--nocte-black)' }}
                   />
-                  <span style={{ fontSize: 13, color: 'var(--nocte-black)' }}>{country}</span>
+                  <span style={{ fontSize: 13, color: 'var(--nocte-black)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{country}</span>
                 </div>
-                <span className="nocte-label" style={{ color: 'var(--nocte-gray-mid)' }}>{count}</span>
+                <span className="nocte-label shrink-0" style={{ color: 'var(--nocte-gray-mid)', paddingLeft: 8 }}>{count}</span>
               </label>
             ))}
           </div>
@@ -188,10 +189,11 @@ export default function FilterSidebar({
         {open.material && (
           <div className="py-3 flex flex-col gap-2">
             {Object.entries(materialCounts).map(([mat, count]) => (
-              <label key={mat} className="flex items-center justify-between cursor-pointer">
-                <div className="flex items-center gap-2">
+              <label key={mat} className="flex items-center justify-between cursor-pointer" style={{ minWidth: 0 }}>
+                <div className="flex items-center gap-2" style={{ minWidth: 0, overflow: 'hidden' }}>
                   <input
                     type="checkbox"
+                    className="shrink-0"
                     checked={filters.materials.includes(mat)}
                     onChange={e => {
                       const next = e.target.checked
@@ -201,9 +203,9 @@ export default function FilterSidebar({
                     }}
                     style={{ accentColor: 'var(--nocte-black)' }}
                   />
-                  <span style={{ fontSize: 13, color: 'var(--nocte-black)' }}>{mat}</span>
+                  <span style={{ fontSize: 13, color: 'var(--nocte-black)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{mat}</span>
                 </div>
-                <span className="nocte-label" style={{ color: 'var(--nocte-gray-mid)' }}>{count}</span>
+                <span className="nocte-label shrink-0" style={{ color: 'var(--nocte-gray-mid)', paddingLeft: 8 }}>{count}</span>
               </label>
             ))}
           </div>
@@ -354,6 +356,7 @@ export default function FilterSidebar({
           top: 80,
           maxHeight: 'calc(100vh - 100px)',
           overflowY: 'auto',
+          overflowX: 'hidden',
         }}
       >
         {sidebarContent}
