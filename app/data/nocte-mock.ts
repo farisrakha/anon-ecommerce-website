@@ -374,6 +374,97 @@ export const lookbookItems = [
   { id: 'lb-12', image: '/images/lookbook/lb-12.jpg', productId: 'prd-012' },
 ]
 
+// Blog posts
+export const blogPosts = [
+  {
+    id: 'blog-001',
+    title: 'How to Build a Cohesive Wholesale Order',
+    description: 'Master the art of curating collections that work together for your store aesthetic.',
+    image: '/images/blog/blog-1.jpg',
+    slug: 'build-cohesive-wholesale-order',
+    readTime: '5 min read',
+    category: 'Buying Tips',
+  },
+  {
+    id: 'blog-002',
+    title: 'Understanding Wholesale Margins and Pricing',
+    description: "A buyer's guide to calculating margins, negotiating terms, and maximising profitability.",
+    image: '/images/blog/blog-2.jpg',
+    slug: 'wholesale-margins-pricing-guide',
+    readTime: '7 min read',
+    category: 'Education',
+  },
+  {
+    id: 'blog-003',
+    title: 'Seasonal Collection Planning for Retailers',
+    description: 'Learn how to plan ahead for SS25, FW25, and Pre-Fall to stock your boutique strategically.',
+    image: '/images/blog/blog-3.jpg',
+    slug: 'seasonal-collection-planning',
+    readTime: '6 min read',
+    category: 'Strategy',
+  },
+  {
+    id: 'blog-004',
+    title: 'Net-30 vs Net-60: Which Terms Work for You',
+    description: 'Understand payment terms, cash flow implications, and how to choose the right option.',
+    image: '/images/blog/blog-4.jpg',
+    slug: 'net-30-vs-net-60-payment-terms',
+    readTime: '4 min read',
+    category: 'Buying Tips',
+  },
+  {
+    id: 'blog-005',
+    title: 'Top 5 Suppliers to Watch in 2025',
+    description: 'Discover emerging luxury wholesalers offering innovative designs and transparent pricing.',
+    image: '/images/blog/blog-5.jpg',
+    slug: 'top-suppliers-2025',
+    readTime: '8 min read',
+    category: 'Trends',
+  },
+  {
+    id: 'blog-006',
+    title: 'MOQ Strategies: Small Orders, Big Impact',
+    description: 'How to negotiate minimum order quantities and work smarter with wholesale minimums.',
+    image: '/images/blog/blog-6.jpg',
+    slug: 'moq-negotiation-strategies',
+    readTime: '5 min read',
+    category: 'Buying Tips',
+  },
+  {
+    id: 'blog-007',
+    title: "Styling Trends: What's Selling This Season",
+    description: 'Curated insights on fabric, silhouettes, and colours trending in boutiques right now.',
+    image: '/images/blog/blog-7.jpg',
+    slug: 'styling-trends-2025',
+    readTime: '6 min read',
+    category: 'Trends',
+  },
+  {
+    id: 'blog-008',
+    title: 'Building Relationships with Premium Suppliers',
+    description: 'How repeat orders, loyalty, and communication unlock better deals and exclusive access.',
+    image: '/images/blog/blog-8.jpg',
+    slug: 'supplier-relationships',
+    readTime: '7 min read',
+    category: 'Education',
+  },
+  {
+    id: 'blog-009',
+    title: 'How to Use Lookbooks for Inspiration',
+    description: "Master NOCTE's mood boards and styled collections to drive informed purchasing decisions.",
+    image: '/images/blog/blog-9.jpg',
+    slug: 'using-lookbooks-inspiration',
+    readTime: '4 min read',
+    category: 'Strategy',
+  },
+]
+
+export type BlogPost = typeof blogPosts[number]
+
+export function getBlogPostBySlug(slug: string): BlogPost | undefined {
+  return blogPosts.find(p => p.slug === slug)
+}
+
 // Derived types from the data arrays
 export type Supplier = typeof suppliers[number]
 export type Collection = typeof collections[number]

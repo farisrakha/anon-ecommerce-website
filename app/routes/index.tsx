@@ -14,6 +14,7 @@ import QuickStats from '../components/sections/QuickStats'
 import FilterSidebar from '../components/sections/FilterSidebar'
 import SeasonalCollections from '../components/sections/SeasonalCollections'
 import CuratedCollections from '../components/sections/CuratedCollections'
+import BlogCarousel from '../components/sections/BlogCarousel'
 import Lookbook from '../components/sections/Lookbook'
 
 function parseArr(v: unknown): string[] {
@@ -162,6 +163,7 @@ function HomePage() {
 
       <QuickStats />
       <CuratedCollections />
+      <BlogCarousel />
       <Lookbook />
     </main>
   )
