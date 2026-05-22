@@ -358,12 +358,29 @@ export const invoices = [
   },
 ]
 
+// Lookbook items — editorial images linked 1:1 to products
+export const lookbookItems = [
+  { id: 'lb-01', image: '/images/lookbook/lb-01.jpg', productId: 'prd-001' },
+  { id: 'lb-02', image: '/images/lookbook/lb-02.jpg', productId: 'prd-002' },
+  { id: 'lb-03', image: '/images/lookbook/lb-03.jpg', productId: 'prd-003' },
+  { id: 'lb-04', image: '/images/lookbook/lb-04.jpg', productId: 'prd-004' },
+  { id: 'lb-05', image: '/images/lookbook/lb-05.jpg', productId: 'prd-005' },
+  { id: 'lb-06', image: '/images/lookbook/lb-06.jpg', productId: 'prd-006' },
+  { id: 'lb-07', image: '/images/lookbook/lb-07.jpg', productId: 'prd-007' },
+  { id: 'lb-08', image: '/images/lookbook/lb-08.jpg', productId: 'prd-008' },
+  { id: 'lb-09', image: '/images/lookbook/lb-09.jpg', productId: 'prd-009' },
+  { id: 'lb-10', image: '/images/lookbook/lb-10.jpg', productId: 'prd-010' },
+  { id: 'lb-11', image: '/images/lookbook/lb-11.jpg', productId: 'prd-011' },
+  { id: 'lb-12', image: '/images/lookbook/lb-12.jpg', productId: 'prd-012' },
+]
+
 // Derived types from the data arrays
 export type Supplier = typeof suppliers[number]
 export type Collection = typeof collections[number]
 export type Product = typeof products[number]
 export type Invoice = typeof invoices[number]
 export type Tier = Product['tiers'][number]
+export type LookbookItem = typeof lookbookItems[number]
 
 // Utility functions
 export function getActiveTier(product: Product, qty: number): Tier {
@@ -390,4 +407,8 @@ export function getProductsByCollection(collectionId: string): Product[] {
 
 export function getProductsBySupplier(supplierId: string): Product[] {
   return products.filter(p => p.supplierId === supplierId)
+}
+
+export function getProductById(id: string): Product | undefined {
+  return products.find(p => p.id === id)
 }

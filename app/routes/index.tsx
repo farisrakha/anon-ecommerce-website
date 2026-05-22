@@ -14,6 +14,7 @@ import QuickStats from '../components/sections/QuickStats'
 import FilterSidebar from '../components/sections/FilterSidebar'
 import SeasonalCollections from '../components/sections/SeasonalCollections'
 import FeaturedSuppliers from '../components/sections/FeaturedSuppliers'
+import Lookbook from '../components/sections/Lookbook'
 
 function parseArr(v: unknown): string[] {
   if (Array.isArray(v)) return (v as unknown[]).filter((x): x is string => typeof x === 'string')
@@ -160,6 +161,7 @@ function HomePage() {
         </div>
       </section>
 
+      <Lookbook />
       <FeaturedSuppliers />
     </main>
   )
