@@ -13,7 +13,7 @@ import HeroMinimal from '../components/sections/HeroMinimal'
 import QuickStats from '../components/sections/QuickStats'
 import FilterSidebar from '../components/sections/FilterSidebar'
 import SeasonalCollections from '../components/sections/SeasonalCollections'
-import FeaturedSuppliers from '../components/sections/FeaturedSuppliers'
+import CuratedCollections from '../components/sections/CuratedCollections'
 import Lookbook from '../components/sections/Lookbook'
 
 function parseArr(v: unknown): string[] {
@@ -107,7 +107,6 @@ function HomePage() {
   return (
     <main>
       <HeroMinimal />
-      <QuickStats />
 
       {/* Mobile filter button */}
       <div
@@ -161,8 +160,9 @@ function HomePage() {
         </div>
       </section>
 
+      <QuickStats />
+      <CuratedCollections />
       <Lookbook />
-      <FeaturedSuppliers />
     </main>
   )
 }
