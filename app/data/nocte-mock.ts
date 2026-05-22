@@ -122,7 +122,7 @@ export const products = [
     supplierId: 'sup-001',
     category: 'Tops',
     material: '100% Linen',
-    images: ['/images/products/shirt-1.jpg'],
+    images: ['/images/spring/shirt.jpg'],
     tiers: [
       { minQty: 6,  unitPrice: 28.00 },
       { minQty: 12, unitPrice: 24.00 },
@@ -138,7 +138,7 @@ export const products = [
     supplierId: 'sup-001',
     category: 'Bottoms',
     material: '100% Linen',
-    images: ['/images/products/trousers-1.jpg'],
+    images: ['/images/spring/trousers.jpg'],
     tiers: [
       { minQty: 6,  unitPrice: 32.00 },
       { minQty: 12, unitPrice: 27.00 },
@@ -154,7 +154,7 @@ export const products = [
     supplierId: 'sup-001',
     category: 'Dresses',
     material: 'Cotton Blend',
-    images: ['/images/products/dress-1.jpg'],
+    images: ['/images/spring/dress.jpg'],
     tiers: [
       { minQty: 6,  unitPrice: 38.00 },
       { minQty: 12, unitPrice: 33.00 },
@@ -170,7 +170,7 @@ export const products = [
     supplierId: 'sup-003',
     category: 'Tops',
     material: 'Merino Wool',
-    images: ['/images/products/knit-1.jpg'],
+    images: ['/images/autumn/turtleneck.jpg'],
     tiers: [
       { minQty: 6,  unitPrice: 55.00 },
       { minQty: 12, unitPrice: 48.00 },
@@ -186,7 +186,7 @@ export const products = [
     supplierId: 'sup-003',
     category: 'Outerwear',
     material: 'Cashmere Blend',
-    images: ['/images/products/coat-1.jpg'],
+    images: ['/images/autumn/coat.jpg'],
     tiers: [
       { minQty: 6,  unitPrice: 120.00 },
       { minQty: 12, unitPrice: 105.00 },
@@ -202,7 +202,7 @@ export const products = [
     supplierId: 'sup-003',
     category: 'Bottoms',
     material: 'Merino Wool',
-    images: ['/images/products/skirt-1.jpg'],
+    images: ['/images/autumn/skirt.jpg'],
     tiers: [
       { minQty: 6,  unitPrice: 48.00 },
       { minQty: 12, unitPrice: 42.00 },
@@ -218,7 +218,7 @@ export const products = [
     supplierId: 'sup-005',
     category: 'Dresses',
     material: 'Italian Silk',
-    images: ['/images/products/silk-1.jpg'],
+    images: ['/images/winter/slip-dress.jpg'],
     tiers: [
       { minQty: 6,  unitPrice: 95.00 },
       { minQty: 12, unitPrice: 82.00 },
@@ -234,7 +234,7 @@ export const products = [
     supplierId: 'sup-005',
     category: 'Outerwear',
     material: 'Virgin Wool',
-    images: ['/images/products/blazer-1.jpg'],
+    images: ['/images/winter/blazer.jpg'],
     tiers: [
       { minQty: 6,  unitPrice: 140.00 },
       { minQty: 12, unitPrice: 122.00 },
@@ -250,7 +250,7 @@ export const products = [
     supplierId: 'sup-005',
     category: 'Tops',
     material: 'Italian Silk',
-    images: ['/images/products/blouse-1.jpg'],
+    images: ['/images/winter/blouse.jpg'],
     tiers: [
       { minQty: 6,  unitPrice: 72.00 },
       { minQty: 12, unitPrice: 62.00 },
@@ -266,7 +266,7 @@ export const products = [
     supplierId: 'sup-001',
     category: 'Tops',
     material: 'Organic Cotton',
-    images: ['/images/products/clothes-2.jpg'],
+    images: ['/images/summer/tee.jpg'],
     tiers: [
       { minQty: 6,  unitPrice: 18.00 },
       { minQty: 12, unitPrice: 15.00 },
@@ -282,7 +282,7 @@ export const products = [
     supplierId: 'sup-001',
     category: 'Bottoms',
     material: '100% Linen',
-    images: ['/images/products/shorts-1.jpg'],
+    images: ['/images/summer/shorts.jpg'],
     tiers: [
       { minQty: 6,  unitPrice: 22.00 },
       { minQty: 12, unitPrice: 18.00 },
@@ -298,7 +298,7 @@ export const products = [
     supplierId: 'sup-001',
     category: 'Tops',
     material: '100% Linen',
-    images: ['/images/products/shirt-2.jpg'],
+    images: ['/images/summer/shirt.jpg'],
     tiers: [
       { minQty: 6,  unitPrice: 26.00 },
       { minQty: 12, unitPrice: 22.00 },
