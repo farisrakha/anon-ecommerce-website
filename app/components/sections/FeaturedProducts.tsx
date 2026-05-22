@@ -123,57 +123,58 @@ export default function FeaturedProducts() {
         {/* Product grid — re-keyed on category change to re-trigger animation */}
         <div
           key={animKey}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full"
         >
           {products.map((product, i) => {
             const isHov = hoveredProductId === product.id
             return (
-              <a
-                key={product.id}
-                href="#catalog"
-                style={{
-                  display: 'block',
-                  textDecoration: 'none',
-                  opacity: 0,
-                  animation: `fadeInUp 0.6s ease-out ${i * 150}ms forwards`,
-                }}
-                onMouseEnter={() => setHoveredProductId(product.id)}
-                onMouseLeave={() => setHoveredProductId(null)}
-              >
-                {/* Image */}
-                <div style={{ overflow: 'hidden', aspectRatio: '3/4', marginBottom: 14 }}>
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                    style={{
-                      transform: isHov ? 'scale(1.04)' : 'scale(1)',
-                      transition: `transform 600ms ${EASE}`,
-                    }}
-                  />
-                </div>
-
-                {/* Text */}
-                <p
+              <div key={product.id} className="w-full min-w-0">
+                <a
+                  href="#catalog"
                   style={{
-                    fontFamily: 'var(--nocte-serif)',
-                    fontSize: 16,
-                    fontWeight: 400,
-                    color: 'var(--nocte-black)',
-                    lineHeight: 1.3,
-                    marginBottom: 4,
-                    textDecoration: isHov ? 'underline' : 'none',
-                    textUnderlineOffset: 3,
-                    textDecorationColor: 'var(--nocte-gray-mid)',
+                    display: 'block',
+                    textDecoration: 'none',
+                    opacity: 0,
+                    animation: `fadeInUp 0.6s ease-out ${i * 150}ms forwards`,
                   }}
+                  onMouseEnter={() => setHoveredProductId(product.id)}
+                  onMouseLeave={() => setHoveredProductId(null)}
                 >
-                  {product.name}
-                </p>
-                <p className="nocte-label" style={{ color: 'var(--nocte-gray-mid)' }}>
-                  {product.origin}
-                </p>
-              </a>
+                  {/* Image */}
+                  <div style={{ overflow: 'hidden', aspectRatio: '3/4', marginBottom: 14 }}>
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                      style={{
+                        transform: isHov ? 'scale(1.04)' : 'scale(1)',
+                        transition: `transform 600ms ${EASE}`,
+                      }}
+                    />
+                  </div>
+
+                  {/* Text */}
+                  <p
+                    style={{
+                      fontFamily: 'var(--nocte-serif)',
+                      fontSize: 16,
+                      fontWeight: 400,
+                      color: 'var(--nocte-black)',
+                      lineHeight: 1.3,
+                      marginBottom: 4,
+                      textDecoration: isHov ? 'underline' : 'none',
+                      textUnderlineOffset: 3,
+                      textDecorationColor: 'var(--nocte-gray-mid)',
+                    }}
+                  >
+                    {product.name}
+                  </p>
+                  <p className="nocte-label" style={{ color: 'var(--nocte-gray-mid)' }}>
+                    {product.origin}
+                  </p>
+                </a>
+              </div>
             )
           })}
         </div>
