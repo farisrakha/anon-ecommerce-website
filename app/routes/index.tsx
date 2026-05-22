@@ -7,13 +7,12 @@ import {
   suppliers,
   collections,
   getSupplierById,
-  getProductsByCollection,
   calcMargin,
 } from '../data/nocte-mock'
 import HeroMinimal from '../components/sections/HeroMinimal'
 import QuickStats from '../components/sections/QuickStats'
 import FilterSidebar from '../components/sections/FilterSidebar'
-import CollectionGrid from '../components/sections/CollectionGrid'
+import SeasonalCollections from '../components/sections/SeasonalCollections'
 import FeaturedSuppliers from '../components/sections/FeaturedSuppliers'
 
 function parseArr(v: unknown): string[] {
@@ -22,9 +21,10 @@ function parseArr(v: unknown): string[] {
   return []
 }
 
-function avgArr(nums: number[]): number {
-  return nums.length ? Math.round(nums.reduce((a, b) => a + b, 0) / nums.length) : 0
-}
+// Collections with at least one product — used for filter sidebar season options (excludes Summer)
+const filterableCollections = collections.filter(c =>
+  products.some(p => p.collectionId === c.id)
+)
 
 export const Route = createFileRoute('/')({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -107,29 +107,6 @@ function HomePage() {
     })
   }, [filters])
 
-  const filteredCollections = useMemo(() => {
-    const colIds = new Set(filteredProducts.map(p => p.collectionId))
-    let cols = collections.filter(c => colIds.has(c.id))
-
-    if (filters.sort === 'priceAsc' || filters.sort === 'priceDesc') {
-      cols = [...cols].sort((a, b) => {
-        const prods = (id: string) => getProductsByCollection(id)
-        const aMin = Math.min(...prods(a.id).map(p => p.tiers[0].unitPrice))
-        const bMin = Math.min(...prods(b.id).map(p => p.tiers[0].unitPrice))
-        return filters.sort === 'priceAsc' ? aMin - bMin : bMin - aMin
-      })
-    } else if (filters.sort === 'marginDesc') {
-      cols = [...cols].sort((a, b) => {
-        const prods = (id: string) => getProductsByCollection(id)
-        const aAvg = avgArr(prods(a.id).map(p => calcMargin(p.tiers[0].unitPrice, p.suggestedRetail)))
-        const bAvg = avgArr(prods(b.id).map(p => calcMargin(p.tiers[0].unitPrice, p.suggestedRetail)))
-        return bAvg - aAvg
-      })
-    }
-
-    return cols
-  }, [filteredProducts, filters.sort])
-
   return (
     <main>
       <HeroMinimal />
@@ -169,14 +146,14 @@ function HomePage() {
               onClearAll={clearAll}
               products={products}
               suppliers={suppliers}
-              collections={collections}
+              collections={filterableCollections}
               mobileOpen={mobileFiltersOpen}
               onMobileClose={() => setMobileFiltersOpen(false)}
             />
           </aside>
           <div className="flex-1 min-w-0">
-            <CollectionGrid
-              collections={filteredCollections}
+            <SeasonalCollections
+              collections={collections}
               filteredProducts={filteredProducts}
               allProducts={products}
               filters={filters}
