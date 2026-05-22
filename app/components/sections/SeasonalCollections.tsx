@@ -85,6 +85,8 @@ function SeasonCard({ collection, cardProducts, view, dimmed }: {
             params={{ id: collection.id }}
             className="nocte-btn-primary"
             style={{ fontSize: 11, pointerEvents: dimmed ? 'none' : 'auto' }}
+            tabIndex={dimmed ? -1 : undefined}
+            aria-disabled={dimmed || undefined}
           >
             EXPLORE {collection.season}
           </Link>
@@ -164,6 +166,8 @@ function SeasonCard({ collection, cardProducts, view, dimmed }: {
             params={{ id: collection.id }}
             className="nocte-btn-primary w-full text-center block"
             style={{ fontSize: 11, pointerEvents: dimmed ? 'none' : 'auto' }}
+            tabIndex={dimmed ? -1 : undefined}
+            aria-disabled={dimmed || undefined}
           >
             EXPLORE {collection.season}
           </Link>

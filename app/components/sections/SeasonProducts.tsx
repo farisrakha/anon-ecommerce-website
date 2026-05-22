@@ -32,7 +32,7 @@ export default function SeasonProducts({ collectionId }: { collectionId: string 
           const supplier = getSupplierById(product.supplierId)
           const margin = calcMargin(product.tiers[0].unitPrice, product.suggestedRetail)
           return (
-            <Link key={product.id} to="/products/$id" params={{ id: product.id }}>
+            <Link key={product.id} to="/products/$id" params={{ id: product.id }} className="block">
               <div className="nocte-card overflow-hidden flex flex-col h-full">
                 <div className="overflow-hidden" style={{ height: 240 }}>
                   <img

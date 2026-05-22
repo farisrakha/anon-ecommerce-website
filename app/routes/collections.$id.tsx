@@ -84,7 +84,7 @@ function CollectionPage() {
               <p className="nocte-label" style={{ color: 'var(--nocte-gray-mid)' }}>{supplier.name}</p>
             )}
           </div>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap gap-8">
             {[
               { label: 'LEAD TIME', value: collection.leadTime },
               { label: 'MOQ',       value: `€${collection.moqValue}` },
