@@ -19,10 +19,8 @@ export default function QuickStats() {
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className="flex-1 py-8 px-4 sm:px-8"
-              style={{
-                borderLeft: i > 0 ? '1px solid var(--nocte-border)' : 'none',
-              }}
+              className={`flex-1 py-8 px-4 sm:px-8${i > 0 ? ' border-t sm:border-t-0 sm:border-l' : ''}`}
+              style={i > 0 ? { borderColor: 'var(--nocte-border)' } : {}}
             >
               <p
                 style={{

@@ -50,7 +50,7 @@ function CollectionCard({ collection, matchingProducts, view }: {
         style={{ border: '1px solid var(--nocte-border)', backgroundColor: 'var(--nocte-surface-1)' }}
       >
         <div className="shrink-0 overflow-hidden" style={{ width: 160, height: 120 }}>
-          <img src={collection.heroImage} alt={collection.title} className="w-full h-full object-cover" />
+          <img src={collection.heroImage} alt={collection.title} loading="lazy" className="w-full h-full object-cover" />
         </div>
         <div className="flex-1 min-w-0">
           <p className="nocte-label mb-1" style={{ color: 'var(--nocte-gray-mid)' }}>{collection.season}</p>
@@ -96,7 +96,7 @@ function CollectionCard({ collection, matchingProducts, view }: {
       className="nocte-card overflow-hidden flex flex-col"
     >
       <div className="overflow-hidden" style={{ height: 200 }}>
-        <img src={collection.heroImage} alt={collection.title} className="w-full h-full object-cover" />
+        <img src={collection.heroImage} alt={collection.title} loading="lazy" className="w-full h-full object-cover" />
       </div>
       <div className="p-5 flex flex-col gap-2 flex-1">
         <p className="nocte-label" style={{ color: 'var(--nocte-gray-mid)' }}>{collection.season}</p>
@@ -219,11 +219,12 @@ export default function CollectionGrid({
             <button
               key={chip.label}
               onClick={chip.onRemove}
+              aria-label={`Remove ${chip.label} filter`}
               className="nocte-badge flex items-center gap-1"
               style={{ cursor: 'pointer' }}
             >
               {chip.label}
-              <span style={{ fontSize: 12, lineHeight: 1 }}>&times;</span>
+              <span aria-hidden="true" style={{ fontSize: 12, lineHeight: 1 }}>&times;</span>
             </button>
           ))}
           <button

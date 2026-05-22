@@ -48,6 +48,10 @@ export default function RangeSlider({ min, max, value, onChange, formatLabel }: 
           min={min}
           max={max}
           value={lo}
+          aria-label={`${formatLabel(lo)} minimum`}
+          aria-valuemin={min}
+          aria-valuemax={max}
+          aria-valuenow={lo}
           onChange={e => onChange([Math.min(Number(e.target.value), hi), hi])}
           style={{
             position: 'absolute',
@@ -66,6 +70,10 @@ export default function RangeSlider({ min, max, value, onChange, formatLabel }: 
           min={min}
           max={max}
           value={hi}
+          aria-label={`${formatLabel(hi)} maximum`}
+          aria-valuemin={min}
+          aria-valuemax={max}
+          aria-valuenow={hi}
           onChange={e => onChange([lo, Math.max(Number(e.target.value), lo)])}
           style={{
             position: 'absolute',
