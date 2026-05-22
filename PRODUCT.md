@@ -1,7 +1,7 @@
 # Product
 
 ## Register
-brand
+product
 
 ## Users
 B2B wholesale buyers: independent retailers, multi-brand boutiques, and fashion

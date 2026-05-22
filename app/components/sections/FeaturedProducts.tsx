@@ -171,7 +171,7 @@ export default function FeaturedProducts() {
                     {product.name}
                   </p>
                   <p className="nocte-label" style={{ color: 'var(--nocte-gray-mid)' }}>
-                    {product.origin}
+                    {product.location}
                   </p>
                 </a>
               </div>

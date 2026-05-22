@@ -471,30 +471,30 @@ export const featuredCategories = [
 
 export type FeaturedCategoryId = typeof featuredCategories[number]['id']
 
-export const featuredProducts: Record<FeaturedCategoryId, { id: string; name: string; origin: string; image: string }[]> = {
+export const featuredProducts: Record<FeaturedCategoryId, { id: string; name: string; location: string; image: string; category: string; supplier: string }[]> = {
   shirt: [
-    { id: 'feat-shirt-001', name: 'Classic Oxford Shirt',   origin: 'Los Angeles, California', image: '/images/featured/shirt/shirt-1.jpg' },
-    { id: 'feat-shirt-002', name: 'Linen Casual Shirt',     origin: 'Paris, France',           image: '/images/featured/shirt/shirt-2.jpg' },
-    { id: 'feat-shirt-003', name: 'Silk Button-Up',         origin: 'Milan, Italy',            image: '/images/featured/shirt/shirt-3.jpg' },
-    { id: 'feat-shirt-004', name: 'Cotton Blend Shirt',     origin: 'Copenhagen, Denmark',     image: '/images/featured/shirt/shirt-4.jpg' },
+    { id: 'feat-shirt-001', name: 'Classic Oxford Shirt',   location: 'Los Angeles, California', image: '/images/featured/shirt/shirt-1.jpg',   category: 'shirt',  supplier: 'sup-001' },
+    { id: 'feat-shirt-002', name: 'Linen Casual Shirt',     location: 'Paris, France',           image: '/images/featured/shirt/shirt-2.jpg',   category: 'shirt',  supplier: 'sup-002' },
+    { id: 'feat-shirt-003', name: 'Silk Button-Up',         location: 'Milan, Italy',            image: '/images/featured/shirt/shirt-3.jpg',   category: 'shirt',  supplier: 'sup-005' },
+    { id: 'feat-shirt-004', name: 'Cotton Blend Shirt',     location: 'Copenhagen, Denmark',     image: '/images/featured/shirt/shirt-4.jpg',   category: 'shirt',  supplier: 'sup-004' },
   ],
   hoodie: [
-    { id: 'feat-hoodie-001', name: 'Classic Pullover',      origin: 'Tokyo, Japan',          image: '/images/featured/hoodie/hoodie-1.jpg' },
-    { id: 'feat-hoodie-002', name: 'Graphic Back Hoodie',   origin: 'Barcelona, Spain',      image: '/images/featured/hoodie/hoodie-2.jpg' },
-    { id: 'feat-hoodie-003', name: 'Midweight Zip-Up',      origin: 'Paris, France',         image: '/images/featured/hoodie/hoodie-3.jpg' },
-    { id: 'feat-hoodie-004', name: 'Oversized Hood',        origin: 'Copenhagen, Denmark',   image: '/images/featured/hoodie/hoodie-4.jpg' },
+    { id: 'feat-hoodie-001', name: 'Oversized Back-Print Hoodie',  location: 'Barcelona, Spain',    image: '/images/featured/hoodie/hoodie-1.jpg', category: 'hoodie', supplier: 'sup-003' },
+    { id: 'feat-hoodie-002', name: 'Collegiate Crest Hoodie',      location: 'London, UK',          image: '/images/featured/hoodie/hoodie-2.jpg', category: 'hoodie', supplier: 'sup-004' },
+    { id: 'feat-hoodie-003', name: 'Oversized Cotton Hoodie',      location: 'Copenhagen, Denmark', image: '/images/featured/hoodie/hoodie-3.jpg', category: 'hoodie', supplier: 'sup-004' },
+    { id: 'feat-hoodie-004', name: 'Minimal Embroidered Hoodie',   location: 'Tokyo, Japan',        image: '/images/featured/hoodie/hoodie-4.jpg', category: 'hoodie', supplier: 'sup-002' },
   ],
   hat: [
-    { id: 'feat-hat-001', name: 'Patchwork Trucker Cap',    origin: 'Milan, Italy',          image: '/images/featured/hat/hat-1.jpg' },
-    { id: 'feat-hat-002', name: 'Structured Baseball Cap',  origin: 'Paris, France',         image: '/images/featured/hat/hat-2.jpg' },
-    { id: 'feat-hat-003', name: 'Washed 6-Panel',           origin: 'Tokyo, Japan',          image: '/images/featured/hat/hat-3.jpg' },
-    { id: 'feat-hat-004', name: 'Wide Brim Felt Hat',       origin: 'Barcelona, Spain',      image: '/images/featured/hat/hat-4.jpg' },
+    { id: 'feat-hat-001', name: 'Classic Baseball Cap', location: 'Los Angeles, California', image: '/images/featured/hat/hat-1.jpg', category: 'hat', supplier: 'sup-001' },
+    { id: 'feat-hat-002', name: 'Wool Beanie',          location: 'Copenhagen, Denmark',     image: '/images/featured/hat/hat-2.jpg', category: 'hat', supplier: 'sup-004' },
+    { id: 'feat-hat-003', name: 'Bucket Hat',           location: 'Tokyo, Japan',            image: '/images/featured/hat/hat-3.jpg', category: 'hat', supplier: 'sup-002' },
+    { id: 'feat-hat-004', name: 'Wide Brim Hat',        location: 'Barcelona, Spain',        image: '/images/featured/hat/hat-4.jpg', category: 'hat', supplier: 'sup-003' },
   ],
   jeans: [
-    { id: 'feat-jeans-001', name: 'Original 501 Dark Wash', origin: 'Copenhagen, Denmark',  image: '/images/featured/jeans/jeans-1.jpg' },
-    { id: 'feat-jeans-002', name: 'Light Wash Straight',    origin: 'Milan, Italy',          image: '/images/featured/jeans/jeans-2.jpg' },
-    { id: 'feat-jeans-003', name: 'Raw Denim Selvedge',     origin: 'Tokyo, Japan',          image: '/images/featured/jeans/jeans-3.jpg' },
-    { id: 'feat-jeans-004', name: 'High Waist Wide Leg',    origin: 'Paris, France',         image: '/images/featured/jeans/jeans-4.jpg' },
+    { id: 'feat-jeans-001', name: 'Original 501 Dark Wash', location: 'Copenhagen, Denmark', image: '/images/featured/jeans/jeans-1.jpg', category: 'jeans', supplier: 'sup-004' },
+    { id: 'feat-jeans-002', name: 'Light Wash Straight',    location: 'Milan, Italy',        image: '/images/featured/jeans/jeans-2.jpg', category: 'jeans', supplier: 'sup-005' },
+    { id: 'feat-jeans-003', name: 'Raw Denim Selvedge',     location: 'Tokyo, Japan',        image: '/images/featured/jeans/jeans-3.jpg', category: 'jeans', supplier: 'sup-002' },
+    { id: 'feat-jeans-004', name: 'High Waist Wide Leg',    location: 'Paris, France',       image: '/images/featured/jeans/jeans-4.jpg', category: 'jeans', supplier: 'sup-003' },
   ],
 }
 
