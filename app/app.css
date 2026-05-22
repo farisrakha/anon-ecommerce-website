@@ -54,6 +54,11 @@ body::-webkit-scrollbar-thumb:hover { background: var(--nocte-gray-mid); }
 .has-scrollbar::-webkit-scrollbar-thumb:hover { background: var(--nocte-gray-mid); }
 
 /* ─── Animations ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes scaleUp {
   0% { transform: scale(0.9); }
   100% { transform: scale(1); }

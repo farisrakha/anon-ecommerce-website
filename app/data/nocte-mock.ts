@@ -461,6 +461,43 @@ export const blogPosts = [
 
 export type BlogPost = typeof blogPosts[number]
 
+// Featured products — browseable by garment category
+export const featuredCategories = [
+  { id: 'shirt',  name: 'Shirts',   description: 'Premium wovens and tailored tops' },
+  { id: 'hoodie', name: 'Hoodies',  description: 'Fleece and cotton separates' },
+  { id: 'hat',    name: 'Hats',     description: 'Headwear and accessories' },
+  { id: 'jeans',  name: 'Jeans',    description: 'Denim in every wash' },
+] as const
+
+export type FeaturedCategoryId = typeof featuredCategories[number]['id']
+
+export const featuredProducts: Record<FeaturedCategoryId, { id: string; name: string; origin: string; image: string }[]> = {
+  shirt: [
+    { id: 'feat-shirt-001', name: 'Unisex Logo Tee',        origin: 'Paris, France',         image: '/images/featured/shirt/shirt-1.jpg' },
+    { id: 'feat-shirt-002', name: 'Relaxed Oxford Shirt',   origin: 'Milan, Italy',          image: '/images/featured/shirt/shirt-2.jpg' },
+    { id: 'feat-shirt-003', name: 'Linen Mockup Shirt',     origin: 'Copenhagen, Denmark',   image: '/images/featured/shirt/shirt-3.jpg' },
+    { id: 'feat-shirt-004', name: 'Cotton Oversized Tee',   origin: 'Barcelona, Spain',      image: '/images/featured/shirt/shirt-4.jpg' },
+  ],
+  hoodie: [
+    { id: 'feat-hoodie-001', name: 'Classic Pullover',      origin: 'Tokyo, Japan',          image: '/images/featured/hoodie/hoodie-1.jpg' },
+    { id: 'feat-hoodie-002', name: 'Graphic Back Hoodie',   origin: 'Barcelona, Spain',      image: '/images/featured/hoodie/hoodie-2.jpg' },
+    { id: 'feat-hoodie-003', name: 'Midweight Zip-Up',      origin: 'Paris, France',         image: '/images/featured/hoodie/hoodie-3.jpg' },
+    { id: 'feat-hoodie-004', name: 'Oversized Hood',        origin: 'Copenhagen, Denmark',   image: '/images/featured/hoodie/hoodie-4.jpg' },
+  ],
+  hat: [
+    { id: 'feat-hat-001', name: 'Patchwork Trucker Cap',    origin: 'Milan, Italy',          image: '/images/featured/hat/hat-1.jpg' },
+    { id: 'feat-hat-002', name: 'Structured Baseball Cap',  origin: 'Paris, France',         image: '/images/featured/hat/hat-2.jpg' },
+    { id: 'feat-hat-003', name: 'Washed 6-Panel',           origin: 'Tokyo, Japan',          image: '/images/featured/hat/hat-3.jpg' },
+    { id: 'feat-hat-004', name: 'Wide Brim Felt Hat',       origin: 'Barcelona, Spain',      image: '/images/featured/hat/hat-4.jpg' },
+  ],
+  jeans: [
+    { id: 'feat-jeans-001', name: 'Original 501 Dark Wash', origin: 'Copenhagen, Denmark',  image: '/images/featured/jeans/jeans-1.jpg' },
+    { id: 'feat-jeans-002', name: 'Light Wash Straight',    origin: 'Milan, Italy',          image: '/images/featured/jeans/jeans-2.jpg' },
+    { id: 'feat-jeans-003', name: 'Raw Denim Selvedge',     origin: 'Tokyo, Japan',          image: '/images/featured/jeans/jeans-3.jpg' },
+    { id: 'feat-jeans-004', name: 'High Waist Wide Leg',    origin: 'Paris, France',         image: '/images/featured/jeans/jeans-4.jpg' },
+  ],
+}
+
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find(p => p.slug === slug)
 }

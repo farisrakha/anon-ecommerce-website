@@ -10,6 +10,7 @@ import {
   calcMargin,
 } from '../data/nocte-mock'
 import HeroMinimal from '../components/sections/HeroMinimal'
+import FeaturedProducts from '../components/sections/FeaturedProducts'
 import QuickStats from '../components/sections/QuickStats'
 import FilterSidebar from '../components/sections/FilterSidebar'
 import SeasonalCollections from '../components/sections/SeasonalCollections'
@@ -108,6 +109,7 @@ function HomePage() {
   return (
     <main>
       <HeroMinimal />
+      <FeaturedProducts />
 
       {/* Mobile filter button */}
       <div
