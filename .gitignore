@@ -4,3 +4,10 @@ node_modules/
 dist/
 *.local
 .vercel/output/
+
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Source image assets (originals stay local; processed copies live in public/)
+assets/
